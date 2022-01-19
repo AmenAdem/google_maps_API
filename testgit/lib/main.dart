@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,9 +23,10 @@ class MyApp extends StatelessWidget {
               children: <Widget>[
                 Text("test 1 2 3 4"),
               FloatingActionButton(
-                onPressed:() {}
+                onPressed:() {
+                  print("test");
+                }
                 ),
-              
               ButtonBar(buttonAlignedDropdown: true,
               )
               ],
