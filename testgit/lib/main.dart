@@ -1,37 +1,42 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp( MyApp());
+void main()
+{
+  runApp(MyApp()); 
 }
-
-
 class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("test git"),
-          backgroundColor: Colors.amber,
-          ),
-          body: Container(
-            child: Column(
-              children: <Widget>[
-                Text("test 1 2 3 4"),
-              FloatingActionButton(
-                onPressed:() {
-                  print("test");
-                }
-                ),
-              ButtonBar(buttonAlignedDropdown: true,
-              )
-              ],
+      title: "Map ",
+      home: HomePage(),
+    );
+  }
+}
+class HomePage extends StatelessWidget {
+  const HomePage({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Map'),
+        backgroundColor: Colors.black,
+        ),
+      body: Center(child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            "google map ",
+            style:TextStyle(fontSize: 20),
             ),
-          ),
+        ],
+      ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        child: Icon(Icons.gps_fixed),
+        backgroundColor: Colors.purple,
         ),
     );
   }
